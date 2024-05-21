@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<include
+			resource="org/springframework/boot/logging/logback/base.xml" />
+	<springProperty scope="context" name="sql_level"
+					source="spring.log.sql_level" />
+
+	<logger name="jdbc.audit" level="WARN" />
+	<logger name="jdbc.connection" level="WARN" />
+	<logger name="jdbc.resultsettable" level="WARN" />
+	<logger name="jdbc.resultset" level="WARN" />
+	<logger name="jdbc.sqltiming" level="WARN" />
+	<root level="INFO">
+		<appender-ref ref="CONSOLE" />
+	</root>
+
+</configuration>
